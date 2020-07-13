@@ -7,17 +7,16 @@ import utility.ConnectionManager;
 
 public class Main {
 	@SuppressWarnings("static-access")
-	public static void main(String args[]) throws ClassNotFoundException, SQLException {
+	public static void main(String args[]) throws Exception {
 		
 	// Fill your code
-		ConnectionManager cm = new ConnectionManager();
-		Connection con = null;
-		con = cm.getConnection();
-		
-		if(con!= null)
+		Connection con=null;
+//		
+		con = ConnectionManager.getConnection();
+		if(con!=null)
 			System.out.println("Connection Established");
-		else
-			System.out.println("Check your connection");
+		else 
+			System.out.println("Check connection");
 		
 	}
 }
